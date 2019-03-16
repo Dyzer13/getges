@@ -2,6 +2,9 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 var prefix = "$"
 var adminprefix = '$'
+client.on('ready', () => {
+    client.channels.get("556188148271677462").join(); 
+    });
 
 client.on("message", message => {
   if (message.channel.type === "dm") { 

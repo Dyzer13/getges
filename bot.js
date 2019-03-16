@@ -48,7 +48,7 @@ client.on("ready", async  => {
      });
 
 
-if(!message.member.roles.some(r=>[".Liberté"].includes(r.name)) ) return;
+
   client.on('message', msg => { 
 
     const at_reply = ('<@' + msg.author.id + '>  '); 
@@ -73,7 +73,7 @@ if(!message.member.roles.some(r=>[".Liberté"].includes(r.name)) ) return;
    
   }); 
 
-if(!message.member.roles.some(r=>[".Liberté"].includes(r.name)) ) return;
+
 client.on("message", message => {
     var prefix = "#";
             var args = message.content.substring(prefix.length).split(" ");
@@ -115,7 +115,7 @@ client.on("message", message => {
                              )						 
 					}});
 
-if(!message.member.roles.some(r=>[".Liberté"].includes(r.name)) ) return;
+
 client.on('message', message => {
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;

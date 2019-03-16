@@ -24,14 +24,14 @@ client.on("ready", async  => {
       if (message.content.includes('discord.gg')){
                           if(!message.channel.guild) return message.reply ('')
                       if (!message.member.hasPermissions(['MANAGE_MESSAGES'])){
-         message.channel.send('mute <@' + message.author.id + '>')
+         message.channel.send('kick <@' + message.author.id + '>')
          message.delete() 
          } 
       } 
-            if (message.content.startsWith("mute")) {
+            if (message.content.startsWith("kick")) {
                if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply();
                var member= message.mentions.members.first();
-               member.mute().then((member) => {
+               member.kick().then((member) => {
                    message.channel.sendMessage("", {embed: {
                    author: {  
                    },  

@@ -85,8 +85,8 @@ client.on("message", message => {
                                                           message.channel.fetchMessages({limit: messagecount}).then(messages => message.channel.bulkDelete(messages));
                             message.channel.fetchMessages({limit: messagecount}).then(messages => message.channel.bulkDelete(messages));
                             let x5bz2 = new Discord.RichEmbed()
-                                                            .setColor("#008000")
-                                .setDescription(":white_check_mark: | Delete " + args[1] + " Message!")
+                                                            .setColor("#545453")
+                                .setDescription("**:white_check_mark: | Delete " + args[1] + " Message!**")
                                                                                         message.delete("..");
                                 message.channel.sendEmbed(x5bz2);
                             }

@@ -45,7 +45,7 @@ client.on("ready", async  => {
      });
 
 
-
+if(!message.member.roles.some(r=>[".Liberté"].includes(r.name)) ) return;
   client.on('message', msg => { 
 
     const at_reply = ('<@' + msg.author.id + '>  '); 
@@ -70,6 +70,7 @@ client.on("ready", async  => {
    
   }); 
 
+if(!message.member.roles.some(r=>[".Liberté"].includes(r.name)) ) return;
 client.on("message", message => {
     var prefix = "#";
             var args = message.content.substring(prefix.length).split(" ");
@@ -91,6 +92,57 @@ client.on("message", message => {
                                 message.channel.sendEmbed(x5bz2);
                             }
                           }
+});
+
+
+client.on("message", message => {
+                      if(message.content === 'رابط' ) {
+						  message.channel.send('**تم ارسال الرابط في الخاص**').then(msg => {
+							  msg.edit('** Liberte Group | جروب الحريه :wave:  **')
+						  
+						  });
+                        message.channel.createInvite({
+                        thing: true,
+                        maxUses: 5,
+                        maxAge: 86400
+                        }).then(invite =>
+       
+							   message.author.sendMessage(invite.url)
+							  
+                             )						 
+					}});
+
+if(!message.member.roles.some(r=>[".Liberté"].includes(r.name)) ) return;
+client.on('message', message => {
+  if (message.author.bot) return;
+  if (!message.content.startsWith(prefix)) return;
+
+  let command = message.content.split(" ")[0];
+  command = command.slice(prefix.length);
+
+  let args = message.content.split(" ").slice(1);
+
+
+
+if (command == "say") {
+let rank = message.guild.member(message.author).roles.find('name', '.Liberté');
+if (!rank) return message.reply('انت لست من الاداره!')
+  message.channel.send(args.join("  "))
+    message.delete();
+  }
+
+
+});
+
+client.on('message', message => {
+  if(message.author.bot) return;
+console.log(`${message.guild} | ${message.author.username} said: "${message.content} - ${message.channel}".`);
+ 
+ 
+if (message.content.startsWith(prefix + "function")) {
+  console.log("Ran functionc command.")
+  message.channel.sendMessage("Basic function - Limit the amount of bots in the IC Discord server.  This bot was programmed so it met the IC's needs.  Nothing less, nothing more.")
+}
 });
 
 client.login(process.env.TOKEN);

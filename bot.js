@@ -184,33 +184,33 @@ client.on('message', message => {
 
 
 
-  client.on('message', message => {
-    if(message.content.startsWith(prefix +'هلا'))  {  
+ client.on('message', message => {
+    if(message.content.startsWith('هلا'))  {  
         message.channel.send(":heart: ارحب تبي مساعده اكتب شي من هي الاشياء حتى نعرف كيف نساعدك '**طرق دفع**' '**كيف التصميم**' '**كيف اشتري نيترو**' اذا ساعدك هذا البوت اترك ريكشن");
         }
       });
 
   client.on('message', message => {
-    if(message.content.startsWith(prefix +'كيف اشتري نيترو'))  {  
+    if(message.content.startsWith('كيف اشتري نيترو'))  {  
         message.channel.send(":heart: يمكنك طلبه من طرف الاخ يوسف او الاخت صوفي ودفع بواسطة سوا اوبيبال والذي يدفع بواسطة السوا يجب عليه الانتظار 48 ساعه لحد اقصى و الذي يشتري بواسطة بيبال سوف يتم شحن نيترو له في الدقيقه نفسها الي طلب فيها");
         }
       });
 
   client.on('message', message => {
-    if(message.content.startsWith(prefix +'كيف التصميم'))  {  
+    if(message.content.startsWith('كيف التصميم'))  {  
         message.channel.send(":heart: يتم تصميم حسب طلب شخص ورح يكون راقي جدا ولكن طرق دفع رح تكون بيبال او سوا سعر تصميم سيرفر بالكامل 60 ريال  , التصميم المميز 120 ريال ");
         }
       });
 
   client.on('message', message => {
-    if(message.content.startsWith(prefix +'طرق الدفع'))  {  
+    if(message.content.startsWith('طرق الدفع'))  {  
         message.channel.send(":heart: طرق دفع هيا بيبال + سوا ورح نضيف انشالله طرق دفع ثانيه  ");
         }
       });
 
 
   client.on('message', message => {
-    if(message.content.startsWith(prefix +'هلا السلام عليكم'))  {  
+    if(message.content.startsWith('هلا السلام عليكم'))  {  
         message.channel.send(":heart: وعليكم السلام , تبي مساعده اكتب شي من هي الاشياء حتى نعرف كيف نساعدك '**طرق دفع**' '**كيف التصميم**' '**كيف اشتري نيترو**' اذا ساعدك هذا البوت اترك ريكشن");
         }
       });

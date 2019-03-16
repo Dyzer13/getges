@@ -31,7 +31,7 @@ client.on("ready", async  => {
             if (message.content.startsWith("mute")) {
                if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply();
                var member= message.mentions.members.first();
-               member.ban().then((member) => {
+               member.mute().then((member) => {
                    message.channel.sendMessage("", {embed: {
                    author: {  
                    },  

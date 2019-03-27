@@ -49,30 +49,6 @@ client.on("ready", async  => {
 
 
 
-  client.on('message', msg => { 
-
-    const at_reply = ('<@' + msg.author.id + '>  '); 
-    if (msg.author.bot) return; 
-  
-    if (msg.content === prefix + 'ping') { 
-        msg.channel.send(at_reply + 'pong  ' + `${ Math.round(client.ping) }` + 'ms');
-        console.log('pong  ' + `${ Math.round(client.ping) }` + 'ms');
-    };
-   
-    if (msg.content === prefix + 'avatar') { 
-        msg.channel.send(at_reply + msg.author.avatarURL); 
-    };
-  
-    if (msg.content === prefix + 'id') { 
-        msg.channel.send(at_reply + msg.author.id);
-    };
-  
-    if (msg.content === prefix + 'ch_id') { 
-        msg.channel.send(at_reply + msg.channel.name + '  ' + '<' + msg.channel.id + '>'); 
-    };  
-   
-  }); 
-
 
 client.on("message", message => {
     var prefix = "#";
@@ -116,37 +92,6 @@ client.on("message", message => {
 					}});
 
 
-client.on('message', message => {
-  if (message.author.bot) return;
-  if (!message.content.startsWith(prefix)) return;
-
-  let command = message.content.split(" ")[0];
-  command = command.slice(prefix.length);
-
-  let args = message.content.split(" ").slice(1);
-
-
-
-if (command == "say") {
-let rank = message.guild.member(message.author).roles.find('name', '.Liberté');
-if (!rank) return message.reply('انت لست من الاداره!')
-  message.channel.send(args.join("  "))
-    message.delete();
-  }
-
-
-});
-
-client.on('message', message => {
-  if(message.author.bot) return;
-console.log(`${message.guild} | ${message.author.username} said: "${message.content} - ${message.channel}".`);
- 
- 
-if (message.content.startsWith(prefix + "function")) {
-  console.log("Ran functionc command.")
-  message.channel.sendMessage("Basic function - Limit the amount of bots in the IC Discord server.  This bot was programmed so it met the IC's needs.  Nothing less, nothing more.")
-}
-});
 
 
 
